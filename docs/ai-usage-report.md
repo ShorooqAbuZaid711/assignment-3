@@ -1,59 +1,80 @@
 # 🤖 AI Usage Report
 
 ## 📌 Overview
-    This report documents how AI tools were used during the development of the Personal Portfolio Web Application (Assignment 1).
-    It highlights the tools used, the benefits and challenges, and how AI assistance was responsibly integrated into the project.
+
+This report describes how AI tools were used during the development of the Personal Portfolio Web Application (Assignment 3).
+AI was used as a helper for specific questions, debugging, and wording — not as a replacement for my own work or 
+understanding.
 
 ---
 
 ## 🛠 Tools Used
-    - ChatGPT (OpenAI GPT-5)
-    Assisted with explaining concepts, generating sample code, and debugging.
+- ChatGPT (OpenAI GPT-5) Used occasionally to:
+    - Clarify React or CSS concepts
+    - Suggest fixes for bugs
+    - Help rephrase parts of the documentation
 
 ---
 
 ## 🎯 Use Cases
-    AI tools were applied in the following areas:
-    1. Code Generation & Debugging
-    - Helped write and refine HTML, CSS, and JavaScript snippets.
-    - Example: In creating a JavaScript greeting function based on the time of day.
-    2. Responsive Design Guidance
-    - Provided suggestions for using @media queries to handle different screen sizes.
-    3. UI/UX Enhancements
-    - Suggested hover effects, animations, and box-shadow styling.
-    4. Documentation Support
-    - Drafted the initial structure of the README.md and this ai-usage-report.md.
+1. Debugging & Error Explanation
+- When I ran into errors (for example, layout issues, theme not applying correctly, or forms not behaving as expected), I asked AI to:
+    - Explain what the error messages meant
+    - Suggest possible causes or fixes
+- I then applied and adapted the solutions myself.
+2. Small Snippets & Pattern Confirmation
+- I used AI to:
+    - Confirm the correct way to structure a controlled React form
+    - Double-check how to use useState and useEffect
+    - Get examples of simple validation checks (e.g., email format)
+The final code was written and adjusted by me to fit the project’s structure.
+3. Styling Suggestions
+- AI was used to:
+    - Suggest improvements for glassmorphism styling
+    - Recommend better spacing or alignment ideas
+- I did not copy full designs; I picked the parts that made sense and integrated them manually.
+4. Documentation Support
+- AI helped:
+    - Clean up the wording for README.md
+    - Structure this ai-usage-report.md
+- All content was reviewed, edited, and customized by me.
 
 ---
 
 ## ✅ Benefits
-    - Learning Aid → Explanations helped understand why code works, not just how.
-    - Debugging Help → Identified syntax errors (e.g., fixing innerText("...") to innerText = "...").
-    - Better Design Ideas → Improved styling consistency with AI’s suggestions.
+- Helped me understand why certain solutions work, not just what to type.
+- Saved time when searching for small syntax or pattern questions.
+- Gave inspiration for improving UI details without taking over the design.
 
 ---
 
-## ⚠️ Challenges
-    - Over-Reliance Risk → Some suggestions needed correction to fully work.
-    - Generalized Output → AI-generated code sometimes required adaptation for this project’s structure.
-    - Learning vs. Copying → Needed discipline to understand the code, not just paste it.
+⚠️ Challenges
+- Some suggestions did not match my exact file structure and had to be adjusted.
+- I had to be careful not to rely too much on AI and make sure I understood every change.
+- Sometimes the AI answer was generic, so I had to test and experiment on my own.
 
---- 
+---
 
 ## 🔎 Learning Outcomes
-    - Improved understanding of responsive design principles using Flexbox and Media Queries.
-    - Gained experience in clean documentation writing using Markdown.
-    - Practiced responsible use of AI by adapting suggestions and ensuring originality.
+- Stronger understanding of:
+    - React components and props
+    - Basic form validation in React
+    - How to structure CSS for themes (light/dark)
+- Learned to treat AI as a tool for guidance, not as the main author of the code.
+- Practiced reading, modifying, and improving suggested snippets instead of copy-pasting.
 
 ---
 
 ## ✨ Responsible AI Usage
-    - AI suggestions were modified and customized to fit the project needs.
-    - All AI-assisted parts are documented transparently in this report.
-    - Final responsibility for correctness and design choices remained with me.
+- AI was used only to assist, not to generate the whole project.
+- All AI-assisted parts were:
+    - Reviewed carefully
+    - Adapted to the project
+    - Tested by me
+- Final responsibility for code quality and design decisions is my own.
 
 ---
 
 ## 📂 Related Documentation
-    - README.md – Project description and setup instructions
-    - technical-documentation.md – Additional technical notes
+- README.md – Project description and setup instructions
+- technical-documentation.md – Additional technical details
