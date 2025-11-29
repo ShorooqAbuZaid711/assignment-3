@@ -42,10 +42,6 @@ To run this project locally:
     ```bash
     npm run dev
 
-Your site will be available at:
-    ```bash
-    http://localhost:5173
-
 ---
 
 ## ✨ Features
