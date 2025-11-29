@@ -36,7 +36,7 @@
 .project-subtitle + .pill-row,
 .pill-row + .project-body,
 .project-body p + p {
-  margin-top: 1rem;               /* spacing ONLY between elements */
+  margin-top: 1rem;              
 }
 
 /* Pills */
@@ -55,6 +55,7 @@
   background: rgba(255,255,255,0.14);
   border: 1px solid rgba(255,255,255,0.25);
   color: rgba(255,255,255,0.85);
+  
 }
 
 [data-theme="light"] .pill {
@@ -74,3 +75,6 @@
   margin-top: 1rem;
 }
 
+.github-meta{
+  margin: 1.2rem;
+}
