@@ -33,12 +33,16 @@ This project forms the foundation of my professional developer portfolio and dem
 To run this project locally:
 
 1. Clone the repository
+    ```bash
     git clone https://github.com/ShorooqAbuZaid711/assignment-3.git
 2. Install dependencies
+    ```bash
     npm install
 3. Run development server
+    ```bash
     npm run dev
 Your site will be available at:
+    ```bash
     http://localhost:5173
 
 ---
