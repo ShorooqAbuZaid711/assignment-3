@@ -1,0 +1,331 @@
+@import "../styles/theme.css";
+
+/* ============================== */
+/*          GLOBAL RESET          */
+/* ============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout container */
+.page-wrapper {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 0 1.4rem 4rem;
+}
+
+/* ============================== */
+/*       SECTIONS (NO BOX)        */
+/* ============================== */
+
+.section {
+  margin-top: var(--space-xl);
+  text-align: center;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  backdrop-filter: none !important;
+}
+
+.section-header {
+  margin-bottom: 1.2rem;
+}
+
+.section-header h2 {
+  font-size: var(--fs-h2);
+  font-weight: 600;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin: 0.4rem auto 1rem;
+  font-size: var(--fs-body);
+  max-width: 700px;
+}
+
+/* ============================== */
+/*         CONTACT FORM           */
+/* ============================== */
+
+.contact-form,
+.elevated-form {
+  width: 100%;
+  max-width: 650px;
+  margin: 1.6rem auto;
+
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 2.4rem 2rem;
+
+  backdrop-filter: blur(55px) saturate(190%);
+  -webkit-backdrop-filter: blur(55px) saturate(190%);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+/* ============================== */
+/* INPUTS & TEXTAREA              */
+/* ============================== */
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem 1.15rem;
+
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 20px;
+
+  color: #ffffff;
+  font-size: 1rem;
+
+  backdrop-filter: blur(35px) saturate(180%);
+  transition: 0.25s ease;
+}
+
+/* These placeholders must exist for floating labels to work */
+input::placeholder,
+textarea::placeholder {
+  color: transparent !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+}
+
+/* ============================== */
+/*  LIGHT MODE INPUTS             */
+/* ============================== */
+
+[data-theme="light"] input,
+[data-theme="light"] textarea {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  color: #111 !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: transparent !important;
+}
+
+/* ============================== */
+/*        FLOATING LABELS         */
+/* ============================== */
+
+.floating {
+  position: absolute;
+  top: 1rem;
+  left: 1.15rem;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+/* Move label up */
+input:not(:placeholder-shown) + .floating,
+textarea:not(:placeholder-shown) + .floating {
+  top: -0.55rem;
+  left: 0.85rem;
+  padding: 0 0.35rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  background: rgba(0,0,0,0.35);
+  color: var(--accent);
+}
+
+[data-theme="light"] .floating {
+  color: rgba(0,0,0,0.55);
+}
+
+[data-theme="light"] input:not(:placeholder-shown) + .floating,
+[data-theme="light"] textarea:not(:placeholder-shown) + .floating {
+  background: #ffffff !important;
+  color: rgba(0,0,0,0.75) !important;
+}
+
+/* ============================== */
+/*            BUTTONS             */
+/* ============================== */
+
+button {
+  padding: 1rem 2.4rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: radial-gradient(circle at top left,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.06)
+  );
+
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  backdrop-filter: blur(40px) saturate(190%);
+  transition: 0.16s ease;
+}
+
+button:hover {
+  transform: translateY(-1px) scale(1.03);
+}
+
+[data-theme="light"] button {
+  background: linear-gradient(120deg,
+    rgba(10,132,255,0.9),
+    rgba(37,99,235,0.9)
+  ) !important;
+  color: #fff !important;
+}
+
+/* ============================== */
+/*         SEARCH INPUT           */
+/* ============================== */
+
+.search-floating-group {
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+
+.search-floating-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.5);
+  background: rgba(15,23,42,0.8);
+  color: #f9fafb;
+  backdrop-filter: blur(26px) saturate(160%);
+}
+
+/* light */
+[data-theme="light"] .search-floating-input {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+}
+
+/* ============================== */
+/*            HEADER              */
+/* ============================== */
+
+.header-wrapper {
+  width: 100%;
+  padding: 3.5rem 0 2.5rem;
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(24px);
+}
+
+.header-content {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-greeting {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+}
+
+.header-title {
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  color: #fff;
+}
+
+.name-gradient {
+  background: linear-gradient(90deg, #4ade80, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-subtitle {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 2rem;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.header-nav a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+}
+
+.header-nav a.active {
+  color: #60a5fa;
+}
+
+/* ============================== */
+/*            FOOTER              */
+/* ============================== */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Light mode */
+[data-theme="light"] .footer {
+  color: rgba(0,0,0,0.75) !important;
+  border-top: 1px solid rgba(0,0,0,0.12) !important;
+}
+
+[data-theme="light"] .footer a {
+  color: rgba(0,0,0,0.85) !important;
+}
+
+/* Dark mode */
+[data-theme="dark"] .footer {
+  color: rgba(255,255,255,0.9) !important;
+  border-top: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+[data-theme="dark"] .footer a {
+  color: rgba(255,255,255,0.9) !important;
+}
