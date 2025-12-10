@@ -1,80 +1,150 @@
-# 🤖 AI Usage Report
+# 🤖 AI Usage Report – Personal Portfolio Web Application (Assignments 1–4)
 
 ## 📌 Overview
 
-This report describes how AI tools were used during the development of the Personal Portfolio Web Application (Assignment 3).
-AI was used as a helper for specific questions, debugging, and wording — not as a replacement for my own work or 
-understanding.
+This report explains **how AI tools were used across all portfolio assignments (1–4)**.
+
+AI was used as a helper for:
+- Clarifying concepts
+- Debugging errors
+- Improving wording and documentation
+- Polishing UX ideas
+
+All final decisions, structure, and code integration were done by me.
 
 ---
 
 ## 🛠 Tools Used
-- ChatGPT (OpenAI GPT-5) Used occasionally to:
-    - Clarify React or CSS concepts
-    - Suggest fixes for bugs
-    - Help rephrase parts of the documentation
+- **ChatGPT (OpenAI GPT-5.1)**  
+  Used to:
+  - Explain React, routing, and Context concepts
+  - Suggest fixes for bugs and layout issues
+  - Propose improvements for CSS and responsiveness
+  - Help structure and refine documentation and this report
 
 ---
 
-## 🎯 Use Cases
-1. Debugging & Error Explanation
-- When I ran into errors (for example, layout issues, theme not applying correctly, or forms not behaving as expected), I asked AI to:
-    - Explain what the error messages meant
-    - Suggest possible causes or fixes
-- I then applied and adapted the solutions myself.
-2. Small Snippets & Pattern Confirmation
-- I used AI to:
-    - Confirm the correct way to structure a controlled React form
-    - Double-check how to use useState and useEffect
-    - Get examples of simple validation checks (e.g., email format)
-The final code was written and adjusted by me to fit the project’s structure.
-3. Styling Suggestions
-- AI was used to:
-    - Suggest improvements for glassmorphism styling
-    - Recommend better spacing or alignment ideas
-- I did not copy full designs; I picked the parts that made sense and integrated them manually.
-4. Documentation Support
-- AI helped:
-    - Clean up the wording for README.md
-    - Structure this ai-usage-report.md
-- All content was reviewed, edited, and customized by me.
+## 🎯 Use Cases by Assignment
+
+### Assignment 1 – Initial Static Portfolio
+
+- Asked AI to:
+  - Review basic HTML structure (header, sections, footer)
+  - Suggest simple CSS improvements (spacing, alignment)
+- I wrote the HTML/CSS, then compared with AI suggestions and selectively applied changes.
+
+### Assignment 2 – Interactivity & Styling
+
+- Used AI to:
+  - Confirm patterns for simple JavaScript interactivity.
+  - Get examples for responsive layouts (media queries, flexbox).
+  - Refine the visual design idea (glassmorphism, card layout).
+- I adapted the suggestions to my own design and class names.
+
+### Assignment 3 – React Migration & Features
+
+Main tasks in this stage included creating a **React + Vite** app with:
+
+- Component-based structure (Header, Layout, ContactForm, ProjectCard, etc.)
+- Page routing (`Home`, `About`, `Projects`, `Contact`)
+- Theme Context for light/dark mode
+- GitHub API integration
+- Animated contact form
+
+AI helped me with:
+
+1. **Debugging & Error Explanation**
+   - When I had issues with:
+     - React Router setup
+     - Theme context not updating correctly
+     - CSS not applying as expected
+   - I pasted relevant code snippets and error messages into ChatGPT.
+   - The AI explained what the errors meant and suggested possible fixes.
+   - I then tested and adapted those fixes.
+
+2. **Small Snippets & Pattern Confirmation**
+   - Checked:
+     - The recommended way to structure controlled form components
+     - How to use `useState` and `useEffect` correctly
+     - How to pattern match email validation with a regex
+   - AI provided generic examples and I integrated them into my specific components.
+
+3. **Styling Suggestions**
+   - I described the look I wanted (iOS-inspired, soft gradients, glassmorphism).
+   - AI suggested:
+     - Using CSS variables
+     - Combining radial gradients for backgrounds
+     - Designing pill-like tags for project metadata
+   - I then designed my own CSS based on those ideas.
+
+4. **Documentation Support**
+   - AI helped:
+     - Clean up the wording of `README.md`
+     - Organize and structure `technical-documentation.md`
+     - Rephrase explanations to be clearer and more concise
+
 
 ---
 
 ## ✅ Benefits
-- Helped me understand why certain solutions work, not just what to type.
-- Saved time when searching for small syntax or pattern questions.
-- Gave inspiration for improving UI details without taking over the design.
+
+- Faster understanding of error messages and React behavior.
+- Clearer mental model of:
+  - How Context and routing work together.
+  - How to design reusable components.
+- Better documentation quality (structure and wording).
+- UI and UX ideas I might not have thought of alone (e.g., floating labels, pill tags, theme toggles).
 
 ---
 
-⚠️ Challenges
-- Some suggestions did not match my exact file structure and had to be adjusted.
-- I had to be careful not to rely too much on AI and make sure I understood every change.
-- Sometimes the AI answer was generic, so I had to test and experiment on my own.
+## ⚠️ Challenges
+
+- Some suggestions did not match my exact file structure and needed manual adaptation.
+- AI sometimes gave “generic” answers; I had to:
+  - Test them
+  - Read the docs
+  - Debug on my own
+- I had to be careful:
+  - Not to copy large chunks blindly
+  - To keep my own naming conventions and style
 
 ---
 
 ## 🔎 Learning Outcomes
-- Stronger understanding of:
-    - React components and props
-    - Basic form validation in React
-    - How to structure CSS for themes (light/dark)
-- Learned to treat AI as a tool for guidance, not as the main author of the code.
-- Practiced reading, modifying, and improving suggested snippets instead of copy-pasting.
+
+Through AI-assisted development, I improved my understanding of:
+
+- **React:**
+  - Components, props, and hooks (`useState`, `useEffect`, Context)
+  - Client-side routing with React Router
+- **Frontend Architecture:**
+  - Separation of components, pages, context, and styles
+  - How to keep code maintainable and readable
+- **CSS & Design:**
+  - Using CSS variables for themes
+  - Designing responsive layouts and card-based UIs
+- **API Integration:**
+  - Fetching from the GitHub REST API
+  - Handling loading and error states
+
+Most importantly, I learned to treat AI as a **guide and reviewer**, not as the author of the project.
 
 ---
 
 ## ✨ Responsible AI Usage
-- AI was used only to assist, not to generate the whole project.
-- All AI-assisted parts were:
-    - Reviewed carefully
-    - Adapted to the project
-    - Tested by me
-- Final responsibility for code quality and design decisions is my own.
+
+- AI was **never** used to generate a full project or assignment in one shot.
+- For each AI-assisted part:
+  - I read and understood the output.
+  - I edited the code or text to fit my project.
+  - I tested everything myself.
+- I take full responsibility for:
+  - The final code
+  - The design choices
+  - The explanations in the documentation and presentation.
 
 ---
 
 ## 📂 Related Documentation
-- README.md – Project description and setup instructions
-- technical-documentation.md – Additional technical details
+- ```README.md``` – Project description and setup instructions
+- ```technical-documentation.md``` – Additional technical details

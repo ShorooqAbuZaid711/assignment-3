@@ -1,40 +1,81 @@
-# 🌟 Personal Portfolio Website (React + Vite)
+# 🌟 Personal Portfolio Web Application – Assignment 4
 
-## 📌 Project Description
+## 📌 Overview
 
-This is a modern, responsive React-based personal portfolio web application, originally built in Assignment 1, expanded in Assignment 2, and now fully 
-enhanced in Assignment 3.
+This repository contains my final personal portfolio web application for **SWE363 – Assignment 4**.  
+It is a modern, responsive, React-based single-page application that showcases:
 
-The application now includes:
-
-- A dynamic homepage with live GitHub API integration
-- A searchable and filterable Projects page with floating-label search
-- A polished Contact form with validation + animations
-- Full light/dark theme switching with saved preferences
-- A modern UI using glassmorphism, smooth transitions, and an iOS-inspired design
-- Cleaner structure, optimized CSS, and updated theme system
-
-This project forms the foundation of my professional developer portfolio and demonstrates advanced front-end skills.
+- My projects and interests
+- Live GitHub activity
+- A polished contact form
+- A full light/dark theme system
 
 ---
 
-## 🛠️ Tech Stack
-- React (Vite)
-- CSS (custom theme system, glassmorphism, responsive layout)
-- Framer Motion (animations)
-- GitHub REST API
-- React Router
-- Context API (theme + persistent state)
+## 🧱 Tech Stack
+
+- **Frontend:** React (with Vite)
+- **Routing:** React Router
+- **State Management:** React Context (for theme)
+- **Styling:** Custom CSS (glassmorphism, theme system, responsive layout)
+- **Animations:** Framer Motion (contact form feedback)
+- **API Integration:** GitHub REST API
 
 ---
 
-## 🚀 Setup Instructions
+## 📂 Project Structure
 
-To run this project locally:
+```text
+assignment-4/
+├── README.md
+├── index.html
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Layout.jsx
+│   │   ├── ContactForm.jsx
+│   │   ├── GitHubSection.jsx
+│   │   ├── ProjectCard.jsx
+│   │   ├── SearchBar.jsx
+│   │   └── ThemeToggle.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Projects.jsx
+│   │   └── Contact.jsx
+│   ├── context/
+│   │   └── ThemeContext.jsx
+│   ├── assets/
+│   │   └── images/
+│   └── styles/
+│       ├── global.css
+│       ├── cards.css
+│       └── theme.css
+├── docs/
+│   ├── ai-usage-report.md
+│   └── technical-documentation.md
+├── presentation/
+│   ├── slides.pdf
+│   └── demo-video.mp4
+├── package.json
+├── vite.config.js
+└── .gitignore
+```
+
+---
+
+## 🚀 Running the Project Locally
+
+**Prerequisites**
+- Node.js (LTS)
+- npm (comes with Node)
 
 1. Clone the repository
     ```bash
-    git clone https://github.com/ShorooqAbuZaid711/assignment-3.git
+    git clone https://github.com/ShorooqAbuZaid711/assignment-4.git
+    cd assignment-4
     ```
 2. Install dependencies
     ```bash
@@ -44,55 +85,75 @@ To run this project locally:
     ```bash
     npm run dev
     ```
-
+4. Open in browser
+    Vite will print a local URL such as:
+    ```bash
+    http://localhost:5173/
+    ```
+    Open it in your browser.
 ---
 
 ## ✨ Features
 
-### 🔹 HTML / React
-- About Me section
-- Projects section with real images and metadata
-- Interactive Contact form
-### 🔹 CSS
-- Clean modern design
-- Glassmorphism surfaces
-- Full floating label system
-- Responsive layout using Flexbox + media queries
+### UI & Pages
+- Header with dynamic greeting (Good morning/afternoon/evening) and navigation.
+- Home Page: Shows latest GitHub repositories using the GitHub API.
+- About Page: Short bio and focus areas.
+- Projects Page:
+    - Cards with images, categories, and pill tags.
+    - Live search input.
+    - Level filter (All / Intermediate / Advanced).
+- Contact Page:
+    - Floating-label form.
+    - Client-side validation for name, email, and message.
+    - Animated feedback messages.
+### Theme System
+- Light/dark mode toggle.
+- Theme saved in localStorage.
+- CSS variables for colors, typography, spacing.
+- Theme applied via ```baah data-theme="light" | "dark"``` on ```bash<html>```.
+### GitHub API Integration
+- Fetches public repositories from my GitHub account.
+- Displays repo name, description, language, and stars.
+- Shows loading and error states.
 
-### 🔹 JavaScript / Interactive Features
-- Dynamic greeting in the header
-- Live search by project title/category/tagline
-- Filter by level (All / Intermediate / Advanced)
-- Email-validated contact form
-- Smooth animations with Framer Motion
-- Theme toggle with localStorage persistence
+---
 
-### 📱 Responsive Design Notes
-- Fully mobile-friendly
-- Fluid spacing and adaptive typography
-- Dark/light mode compatibility
-- Tested via DevTools responsive mode
+## 🧪 Error Handling & Performance
+- Graceful error messages for:
+    - GitHub API failures
+    - Invalid contact form input
+- No page reloads; SPA navigation via React Router.
+- Limited GitHub API calls (only on mount).
+- Responsive layout built with Flexbox and fluid typography.
 
 ---
 
 ## 🤖 AI Usage Summary
 
-I used AI tools to support development 
-responsibly:
-
-- ChatGPT → Helped refine CSS (header/footer alignment, floating labels, glassmorphism), debug React logic, improve theme behavior, and optimize the search bar UI.
-- Benefit → Faster debugging, improved UI consistency, clearer component structure.
-- Challenge → Ensuring suggestions did not introduce unnecessary changes.
-- Learning Outcome → Strengthened understanding of React state flow, context management, UI styling, and API integration.
-
-A detailed report is documented in:
-- docs/ai-usage-report.md
+AI tools were used as assistants, not as a replacement for understanding.
+Examples:
+- Clarifying React / CSS concepts.
+- Debugging layout and state issues.
+- Improving wording and structure of the documentation.
+- Helping refine this README and the AI usage report.
+**A detailed log** of all AI tool usage (including prompts, outputs, edits, and reflections) is provided in:
+- ```bash docs/ai-usage-report.md```
 
 ---
 
-## 📘 Documentation Links
-- Technical Documentation → docs/technical-documentation.md
-- AI Usage Report → docs/ai-usage-report.md
+## Documentation
+- Technical Documentation: ```bash docs/technical-documentation.md```
+- AI Usage Report: ```bash docs/ai-usage-report.md```
+- Slides & Demo: ```bash presentation/slides.pdf, presentation/demo-video.mp4```
+
+---
+
+## 🔮 Future Improvements
+- Connect the Contact form to a real backend or email service.
+- Add more projects with richer content (videos, links, case studies).
+- Add basic analytics (page visits, link clicks).
+- Improve accessibility further (ARIA attributes, keyboard navigation).
 
 ---
 
